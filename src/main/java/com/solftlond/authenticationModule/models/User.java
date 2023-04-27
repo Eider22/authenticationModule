@@ -10,6 +10,8 @@ public class User {
 	private String email;
 	private String password;
 
+	public User() {}
+
 	public User(Integer id, String firstName, String secondName, String firstlastname, String secondLastname,
 			String email, String password) {
 		super();

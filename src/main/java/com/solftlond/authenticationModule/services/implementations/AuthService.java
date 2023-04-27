@@ -42,10 +42,14 @@ public class AuthService implements IAuthService {
 			user.setPassword("");
 			LoginResponse loginResponse = new LoginResponse(this.jwtService.getToken(), user);
 
-			Response response = new Response("", loginResponse);
+			Response response = new Response("Sesión iniciada con éxito", loginResponse);
 			return response;
 		});
 
+	}
+	
+	void prueba() {
+		
 	}
 
 }

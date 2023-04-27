@@ -11,12 +11,12 @@ public class JwtService {
 		token = 0;
 	}
 
-	public static Integer getToken() {
+	public Integer getToken() {
 		token = token + 1;
 		return token;
 	}
 
-	public static void setToken(Integer token) {
+	public void setToken(Integer token) {
 		JwtService.token = token;
 	}
 

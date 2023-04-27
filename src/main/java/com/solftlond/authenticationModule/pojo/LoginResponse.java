@@ -7,6 +7,9 @@ public class LoginResponse {
 	private Integer token;
 	private User user;
 
+	
+	public LoginResponse() {}
+	
 	public LoginResponse(Integer token, User user) {
 		super();
 		this.token = token;

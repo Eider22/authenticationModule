@@ -4,6 +4,9 @@ public class Response {
 
 	private String message;
 	private Object object;
+	
+	public Response() {}
+
 
 	public Response(String message, Object object) {
 		super();
