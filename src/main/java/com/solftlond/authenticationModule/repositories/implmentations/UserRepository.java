@@ -28,11 +28,9 @@ public class UserRepository implements IUserRepository {
 		}).orElse(null);
 
 		if (findUser == null) {
-			System.out.println("1");
 			return null;
 		}
-
-		System.out.println("2");
+		
 		return Mono.just(findUser);
 	}
 

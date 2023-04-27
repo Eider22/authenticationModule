@@ -2,20 +2,20 @@ package com.solftlond.authenticationModule.pojo;
 
 public class LoginResponse {
 
-	private String token;
+	private Integer token;
 	private String user;
 
-	public LoginResponse(String token, String user) {
+	public LoginResponse(Integer token, String user) {
 		super();
 		this.token = token;
 		this.user = user;
 	}
 
-	public String getToken() {
+	public Integer getToken() {
 		return token;
 	}
 
-	public void setToken(String token) {
+	public void setToken(Integer token) {
 		this.token = token;
 	}
 

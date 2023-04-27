@@ -16,13 +16,14 @@ public class AuthService implements IAuthService {
 
 	@Autowired
 	private UserService userService;
+	@Autowired
+	private JwtService jwtService;
+	
 
 	@Override
 	public Mono<Response> login(LoginRequest loginRequest) {
 
 		Mono<User> findUser = this.userService.findByEmail(loginRequest.getUser());
-		
-		System.out.println(findUser);
 
 		if (findUser == null) {
 			return null;
@@ -38,7 +39,7 @@ public class AuthService implements IAuthService {
 				return new Response("Credenciales incorrectas", null);
 			}
 
-			LoginResponse loginResponse = new LoginResponse("token", user.getEmail());
+			LoginResponse loginResponse = new LoginResponse(this.jwtService.getToken(), user.getEmail());
 
 			Response response = new Response("", loginResponse);
 			return response;
