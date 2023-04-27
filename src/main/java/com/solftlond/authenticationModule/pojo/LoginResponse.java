@@ -1,11 +1,13 @@
 package com.solftlond.authenticationModule.pojo;
 
+import com.solftlond.authenticationModule.models.User;
+
 public class LoginResponse {
 
 	private Integer token;
-	private String user;
+	private User user;
 
-	public LoginResponse(Integer token, String user) {
+	public LoginResponse(Integer token, User user) {
 		super();
 		this.token = token;
 		this.user = user;
@@ -19,11 +21,11 @@ public class LoginResponse {
 		this.token = token;
 	}
 
-	public String getUser() {
+	public User getUser() {
 		return user;
 	}
 
-	public void setUser(String user) {
+	public void setUser(User user) {
 		this.user = user;
 	}
 

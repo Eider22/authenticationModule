@@ -39,7 +39,8 @@ public class AuthService implements IAuthService {
 				return new Response("Credenciales incorrectas", null);
 			}
 
-			LoginResponse loginResponse = new LoginResponse(this.jwtService.getToken(), user.getEmail());
+			user.setPassword("");
+			LoginResponse loginResponse = new LoginResponse(this.jwtService.getToken(), user);
 
 			Response response = new Response("", loginResponse);
 			return response;
